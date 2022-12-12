@@ -1,0 +1,66 @@
+{% extends "climate/layout.html" %}
+{% load static %}
+{% block body %}
+
+<h1 style="margin-top: 30px;" class="text-center" id="opinion">CLIMATE CHANGE POLL</h1>
+
+
+<div class="mainpool">
+
+    <div class="ques">
+
+        <h3>1. In your opinion, do you think the temperature on earth has been rising over the past decade?</h3>
+        <div class="option">
+            <p>1. Yes, because of human activities</p>
+            <p>2. Yes, because of natural causes</p>
+            <p>3. Don't know</p>
+        </div>
+        
+    </div>
+    
+    <div  id="choices" >
+        <div class="choice">
+            <div class="result">
+                <div class="bar" data-choice="1"></div>
+            </div>
+            <div class="label">
+                <p class="name">Choice 1</p>
+                <button class="btn btn-primary" data-choice="1" >Vote</button>
+            </div>
+    
+        </div>
+        <div class="choice">
+            <div class="result">
+                <div class="bar" data-choice="2"></div>
+            </div>
+            <div class="label">
+                <p class="name">Choice 2</p>
+                <button class="btn btn-primary" data-choice="2" >Vote</button>
+            </div>
+            
+        </div>
+        <div class="choice">
+            <div class="result">
+                <div class="bar" data-choice="3"></div>
+            </div>
+            <div class="label">
+                <p class="name">Choice 3</p>
+                <button class="btn btn-primary" data-choice="3" >Vote</button>
+            </div>
+            
+        </div>
+    </div>
+    
+    
+
+</div>
+
+
+
+
+{% block script %}
+    <script src="{% static 'climate/poll.js' %}"></script>
+{% endblock %}
+
+
+{% endblock %}
